@@ -6,7 +6,7 @@
 /*   By: root <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 13:48:01 by root              #+#    #+#             */
-/*   Updated: 2024/07/21 18:59:59 by root             ###   ########.fr       */
+/*   Updated: 2024/07/21 19:19:14 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,17 @@
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	int	i;
-	int	diff;
 
 	i = 0;
-	diff = 0;
 	if (n == 0)
 		return (0);
 	while ((s1[i] || s2[i]) && i < n)
 	{
-		diff = diff + (s1[i] - s2[i]);
+		if (s1[i] != s2[i]);
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (diff);
+	return (0);
 }
 /*
 int	main()
