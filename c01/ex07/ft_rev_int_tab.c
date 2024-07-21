@@ -6,11 +6,12 @@
 /*   By: root <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 18:16:35 by root              #+#    #+#             */
-/*   Updated: 2024/07/20 20:24:02 by root             ###   ########.fr       */
+/*   Updated: 2024/07/21 15:34:26 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+//#include <stdio.h>
 
 void	ft_swap(int *a, int *b)
 {
@@ -32,3 +33,26 @@ void	ft_rev_int_tab(int *tab, int size)
 		i++;
 	}
 }
+/*
+int     main(void)
+{
+        int     tab[] = {1, 2, 3, 4, 5};
+        int     size = 5;
+        int     i;
+
+        printf("Tableau avant renversement: ");
+        for (i = 0; i < size; i++)
+        {
+                printf("%d ", tab[i]);
+        }
+        printf("\n");
+        ft_rev_int_tab(tab, size);
+        printf("Tableau après renversement: ");
+        for (i = 0; i < size; i++)
+        {
+                printf("%d ", tab[i]);
+        }
+        printf("\n");
+        return 0;
+}
+*/

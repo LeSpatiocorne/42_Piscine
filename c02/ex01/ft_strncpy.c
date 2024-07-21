@@ -6,10 +6,11 @@
 /*   By: ndruon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 10:17:05 by ndruon            #+#    #+#             */
-/*   Updated: 2024/07/20 14:17:18 by ndruon           ###   ########.fr       */
+/*   Updated: 2024/07/21 16:02:39 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
+//#include <stdio.h>
 
 char	*ft_strncpy(char	*dest, char	*src, unsigned	int	n)
 {
@@ -28,3 +29,18 @@ char	*ft_strncpy(char	*dest, char	*src, unsigned	int	n)
 	}
 	return (dest);
 }
+/*
+int     main(void)
+{
+        char src[] = "Hello, world!";
+        char dest[20];
+
+        unsigned int n = 5;
+        ft_strncpy(dest, src, n);
+
+        printf("Source: %s\n", src);
+        printf("Destination: %s\n", dest);
+
+        return 0;
+}
+*/
