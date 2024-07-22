@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndruon <marvin@42.fr>                        +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/20 15:06:59 by ndruon              #+#    #+#           */
-/*   Updated: 2024/07/20 16:36:53 by root             ###   ########.fr       */
+/*   Created: 2024/07/20 15:06:59 by ndruon             #+#    #+#            */
+/*   Updated: 2024/07/22 15:01:19 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_str_is_strlowcase(char	*str)
 	len = 0;
 	while (str[len])
 	{
-		if ((str[len] > 64 && str[len] < 91))
+		if (str[len] > 64 && str[len] < 91)
 			str[len] += 32;
 		len++;
 	}
