@@ -6,7 +6,7 @@
 /*   By: root <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 13:48:01 by root              #+#    #+#             */
-/*   Updated: 2024/07/21 19:19:14 by root             ###   ########.fr       */
+/*   Updated: 2024/07/22 11:34:11 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		return (0);
 	while ((s1[i] || s2[i]) && i < n)
 	{
-		if (s1[i] != s2[i]);
+		if (s1[i] != s2[i])
 			return (s1[i] - s2[i]);
 		i++;
 	}
@@ -34,7 +34,8 @@ int	main()
 	char	str1[] = "teste";
 	char	str2[] = "test";
 	unsigned int number = 5;
-	printf("Comparaison entre %s et %s : %d\n", str1, str2, ft_strncmp(str1, str2, number));
+	printf("Comparaison entre %s et %s : %d\n",
+		str1, str2, ft_strncmp(str1, str2, number));
 	return (0);
 }
 */

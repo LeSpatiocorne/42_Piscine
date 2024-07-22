@@ -6,7 +6,7 @@
 /*   By: ndruon <marvin@42.fr>                        +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 15:06:59 by ndruon              #+#    #+#           */
-/*   Updated: 2024/07/21 16:05:50 by root             ###   ########.fr       */
+/*   Updated: 2024/07/22 11:28:46 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	ft_str_is_alpha(char	*str)
 	len = 0;
 	while (str[len])
 	{
-		if (!((str[len] > 64 && str[len] < 91) || (str[len] > 96 && str[len] < 123)))
+		if (!((str[len] > 64 && str[len] < 91)
+				|| (str[len] > 96 && str[len] < 123)))
 			return (0);
 		len++;
 	}

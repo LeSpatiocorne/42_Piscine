@@ -6,15 +6,15 @@
 /*   By: ndruon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 10:17:05 by ndruon            #+#    #+#             */
-/*   Updated: 2024/07/21 16:02:39 by root             ###   ########.fr       */
+/*   Updated: 2024/07/22 11:25:40 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 //#include <stdio.h>
 
-char	*ft_strncpy(char	*dest, char	*src, unsigned	int	n)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned	int	len;
+	unsigned int	len;
 
 	len = 0;
 	while (src[len] != '\0' && len < n)
@@ -22,7 +22,7 @@ char	*ft_strncpy(char	*dest, char	*src, unsigned	int	n)
 		dest[len] = src[len];
 		len++;
 	}
-	while(len < n)
+	while (len < n)
 	{
 		dest[len] = '\0';
 		len++;

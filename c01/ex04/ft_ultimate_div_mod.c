@@ -6,7 +6,7 @@
 /*   By: root <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 17:18:42 by root              #+#    #+#             */
-/*   Updated: 2024/07/21 15:44:54 by root             ###   ########.fr       */
+/*   Updated: 2024/07/22 11:16:59 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,10 @@ int     main(void)
         int x = 10;
         int y = 3;
 
-        printf("Avant l'appel de ft_ultimate_div_mod: x = %d, y = %d\n", x, y);
+        printf("Avant l'appel : x = %d, y = %d\n",x, y);
         ft_ultimate_div_mod(&x, &y);
-        printf("Après l'appel de ft_ultimate_div_mod: x = %d (div), y = %d (mod)\n", x, y);
+        printf("Après l'appel : x = %d (div), y = %d (mod)\n",
+		x, y);
         return (0);
 }
 */

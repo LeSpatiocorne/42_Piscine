@@ -6,7 +6,7 @@
 /*   By: root <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 13:48:01 by root              #+#    #+#             */
-/*   Updated: 2024/07/21 19:17:17 by root             ###   ########.fr       */
+/*   Updated: 2024/07/22 11:32:40 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ int	main()
 	char	str1[] = "teste";
 	char	str2[] = "test";
 
-	printf("Comparaison entre %s et %s : %d\n", str1, str2, ft_strcmp(str1, str2));
+	printf("Comparaison entre %s et %s : %d\n",
+		str1, str2, ft_strcmp(str1, str2));
 	return (0);
 }
 */

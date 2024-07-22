@@ -6,7 +6,7 @@
 /*   By: ndruon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 10:17:05 by ndruon            #+#    #+#             */
-/*   Updated: 2024/07/21 16:00:44 by root             ###   ########.fr       */
+/*   Updated: 2024/07/22 11:23:55 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -29,7 +29,8 @@ char	*ft_strcpy(char	*dest, char	*src)
 int     main(void)
 {
         char src[] = "Hello, world!";
-        char dest[50];// l'array doit être assez grand pour contenir le string de src
+        char dest[50];
+	// l'array doit être assez grand pour contenir le string de src
 
         ft_strcpy(dest, src);
         printf("Source: %s\n", src);

@@ -6,7 +6,7 @@
 /*   By: ndruon <marvin@42.fr>                        +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 15:06:59 by ndruon              #+#    #+#           */
-/*   Updated: 2024/07/21 16:15:05 by root             ###   ########.fr       */
+/*   Updated: 2024/07/22 11:31:06 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,11 @@ int	ft_str_is_printable(char	*str)
 int     main(void)
 {
         char str1[] = "Hello, world!";
-        char str2[] = "Hello\x7Fworld!"; // \x7F est "DEL", il n'est pas printable
+        char str2[] = "Hello\x7Fworld!"; 
+	// \x7F est "DEL", il n'est pas printable
 
-        printf("Test avec \"%s\": %d\n", str1, ft_str_is_printable(str1)); // 1
-        printf("Test avec \"%s\": %d\n", str2, ft_str_is_printable(str4)); // 0
+        printf("Test %s: %d\n", str1, ft_str_is_printable(str1)); // 1
+        printf("Test %s: %d\n", str2, ft_str_is_printable(str2)); // 0
 
         return 0;
 }
