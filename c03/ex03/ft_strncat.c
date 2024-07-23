@@ -6,7 +6,7 @@
 /*   By: ndruon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 16:58:01 by ndruon            #+#    #+#             */
-/*   Updated: 2024/07/22 17:24:18 by ndruon           ###   ########.fr       */
+/*   Updated: 2024/07/23 11:58:39 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int main()
 {
 	char dest[100] = "Hello, ";
 	char src[] = "world!";
-	unsigned int nb = 3;
+	unsigned int nb = 0;
 
 	ft_strncat(dest, src, nb);
 	printf("Concatenated string: %s\n", dest);
