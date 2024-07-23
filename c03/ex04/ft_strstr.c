@@ -6,9 +6,10 @@
 /*   By: ndruon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 17:26:20 by ndruon            #+#    #+#             */
-/*   Updated: 2024/07/23 13:55:28 by ndruon           ###   ########.fr       */
+/*   Updated: 2024/07/23 15:29:02 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -42,19 +43,22 @@ char	*ft_strstr(char *str, char *to_find)
 	char	cat[];
 	int	i;
 
-	cat = ft_strcat(str, to_find);
+	cat[] = *ft_strcat(str, to_find);
 	i =  ft_strlen(str);
 
 	while(i != '\0')
 	{
-		to_find = cat[i];
+		*to_find = cat[i];
 		i++;
 	}
-	return to_find
+	return (to_find);
 }
 
 int	main(void)
 {
 	char str1[] = "test";
 	char str2[] = "yolo";
-
+	
+	printf("input %s and %s\n", str1, str2);
+	printf("output %s\n", ft_strstr(str1, str2));
+}
