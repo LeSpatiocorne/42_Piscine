@@ -6,7 +6,7 @@
 /*   By: ndruon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 17:26:20 by ndruon            #+#    #+#             */
-/*   Updated: 2024/07/24 11:39:42 by root             ###   ########.fr       */
+/*   Updated: 2024/07/24 11:52:38 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -29,9 +29,9 @@ char	*ft_strstr(char *str, char *to_find)
 	if (ft_strlen(to_find) == 0)
 		return (str);
 	i = 0;
-	i2 = 0;
 	while (str[i])
 	{
+		i2 = 0;
 		while (to_find[i2])
 		{
 			if (str[i + i2] == to_find[i2])
