@@ -6,7 +6,7 @@
 /*   By: ndruon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 17:26:20 by ndruon            #+#    #+#             */
-/*   Updated: 2024/07/23 15:29:02 by ndruon           ###   ########.fr       */
+/*   Updated: 2024/07/24 11:39:42 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -21,44 +21,39 @@ int	ft_strlen(char *str)
 	return (len);
 }
 
-char	*ft_strcat(char *dest, char *src)
-{
-	size_t dest_len;
-	size_t i;
-
-	dest_len = ft_strlen(dest);
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[dest_len + i] = src[i];
-		i++;
-	}
-	dest[dest_len + i] = '\0';
-
-	return (dest);
-}
-
 char	*ft_strstr(char *str, char *to_find)
 {
-	char	cat[];
-	int	i;
-
-	cat[] = *ft_strcat(str, to_find);
-	i =  ft_strlen(str);
-
-	while(i != '\0')
+	unsigned int	i;
+	unsigned int	i2;
+	
+	if (ft_strlen(to_find) == 0)
+		return (str);
+	i = 0;
+	i2 = 0;
+	while (str[i])
 	{
-		*to_find = cat[i];
+		while (to_find[i2])
+		{
+			if (str[i + i2] == to_find[i2])
+			{
+				if (to_find[i2 + 1] == '\0')
+					return (&str[i]);
+			}
+			else
+				break;
+			i2++;
+		}
 		i++;
 	}
-	return (to_find);
+	return (NULL);
 }
-
+/*
 int	main(void)
 {
-	char str1[] = "test";
-	char str2[] = "yolo";
+	char str1[] = "utopia";
+	char str2[] = "op";
 	
-	printf("input %s and %s\n", str1, str2);
+	printf("input %s wanted occurence %s\n", str1, str2);
 	printf("output %s\n", ft_strstr(str1, str2));
 }
+*/
