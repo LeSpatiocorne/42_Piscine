@@ -6,7 +6,7 @@
 /*   By: ndruon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 17:26:20 by ndruon            #+#    #+#             */
-/*   Updated: 2024/07/24 11:52:38 by root             ###   ########.fr       */
+/*   Updated: 2024/07/25 13:55:33 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -14,7 +14,7 @@
 int	ft_strlen(char *str)
 {
 	int	len;
-	
+
 	len = 0;
 	while (str[len] != '\0')
 		len++;
@@ -25,7 +25,7 @@ char	*ft_strstr(char *str, char *to_find)
 {
 	unsigned int	i;
 	unsigned int	i2;
-	
+
 	if (ft_strlen(to_find) == 0)
 		return (str);
 	i = 0;
@@ -40,7 +40,7 @@ char	*ft_strstr(char *str, char *to_find)
 					return (&str[i]);
 			}
 			else
-				break;
+				break ;
 			i2++;
 		}
 		i++;
