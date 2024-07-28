@@ -6,15 +6,16 @@
 /*   By: ndruon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 14:18:00 by ndruon            #+#    #+#             */
-/*   Updated: 2024/07/28 11:15:37 by root             ###   ########.fr       */
+/*   Updated: 2024/07/28 12:54:02 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "header.h"
 #include <unistd.h>
+
+int	grid[4][4];
 
 void	print_grid(void)
 {
-	int	grid[4][4];
 	int	i;
 	int	j;
 	char	c;
@@ -38,15 +39,12 @@ void	print_grid(void)
 
 void	move_and_replace(int x, int y, int value)
 {
-	int	grid[4][4];
-
 	if (x >= 0 && x < 4 && y >= 0 && y < 4)
 		grid[x][y] = value;
 }
 
 void	init_grid(void)
 {
-	int	grid[4][4];
 	int	i;
 	int	j;
 

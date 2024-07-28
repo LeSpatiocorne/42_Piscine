@@ -1,15 +1,14 @@
 #include <unistd.h>
 #include "header.h"
 
+extern int grid[4][4];
+
 int	ft_check_sums_rows(void)
 {
-	int	grid[4][4];
 	int	i;
 	int	j;
 	int	sum;
-	char	*c;
 
-	c = "ERROR : row value is not 10\n";
 	i = 0;
 	while (i < 4)
 	{
@@ -21,20 +20,20 @@ int	ft_check_sums_rows(void)
 			j++;
 		}
 		if (sum != 10)
-			write(1, c, 28);
+		{
+			write(1, "ERROR : row value is not 10\n", 28);
+			return (1);
+		}
 		i++;
 	}
 }
 
 int	ft_check_sums_cols(void)
 {
-	int	grid[4][4];
 	int	i;
 	int	j;
 	int	sum;
-	char	*c;
 
-	c = "ERROR : col value is not 10\n";
 	j = 0;
 	while (j < 4)
 	{
@@ -46,7 +45,10 @@ int	ft_check_sums_cols(void)
 			i++;
 		}
 		if (sum != 10)
-			write(1, c, 28);
+		{
+			write(1, "ERROR : col value is not 10\n", 28);
+			return (1);
+		}
 		j++;
 	}
 }
