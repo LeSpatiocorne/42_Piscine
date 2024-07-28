@@ -6,25 +6,59 @@
 /*   By: ndruon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 14:18:00 by ndruon            #+#    #+#             */
-/*   Updated: 2024/07/27 15:32:10 by ndruon           ###   ########.fr       */
+/*   Updated: 2024/07/28 11:15:37 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "header.h"
+
 #include <unistd.h>
 
-void	ft_grid(char *str)
+void	print_grid(void)
 {
-	int i;
-	char current;
+	int	grid[4][4];
+	int	i;
+	int	j;
+	char	c;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (i < 4)
 	{
-		current = str[i];
-		write(1, &current, 1);
+		j = 0;
+		while (j < 4)
+		{
+			c = grid[i][j] + '0';
+			write(1, &c, 1);
+			if (j < 3)
+				write(1, " ", 1);
+			j++;
+		}
+		write(1, "\n", 1);
 		i++;
-		if (i == 4 || i == 8 || i == 12 || i == 16)
-			write(1, "\n", 1);
 	}
-	write(1, "\n", 1);
+}
+
+void	move_and_replace(int x, int y, int value)
+{
+	int	grid[4][4];
+
+	if (x >= 0 && x < 4 && y >= 0 && y < 4)
+		grid[x][y] = value;
+}
+
+void	init_grid(void)
+{
+	int	grid[4][4];
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < 4)
+	{
+		j = 0;
+		while (j < 4)
+		{
+			grid[i][j] = 0;
+			j++;
+		}
+		i++;
+	}
 }
