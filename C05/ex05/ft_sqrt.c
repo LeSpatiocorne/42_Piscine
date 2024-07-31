@@ -6,8 +6,17 @@
 /*   By: ndruon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 13:07:03 by ndruon            #+#    #+#             */
-/*   Updated: 2024/07/25 13:07:06 by ndruon           ###   ########.fr       */
+/*   Updated: 2024/07/31 14:02:54 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <stdio.h>
 
+int	ft_sqrt(int nb)
+{
+	if (nb == 0)
+		return (0);
+	if (nb < 0)
+		return (0);
+	return (ft_sqrt(nb) / nb);
+}
