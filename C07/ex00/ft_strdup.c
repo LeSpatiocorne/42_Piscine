@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: ndruon <ndruon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 15:21:49 by root              #+#    #+#             */
-/*   Updated: 2024/07/31 17:18:09 by root             ###   ########.fr       */
+/*   Updated: 2024/08/05 08:58:35 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-//#include <stdio.h>
-//#include <string.h>
+#include <stdio.h>
+#include <string.h>
 
 int	ft_strlen(char *str)
 {
@@ -41,7 +41,7 @@ char	*ft_strcpy(char *dest, char *src)
 
 char	*ft_strdup(char *src)
 {
-	int	len;
+	int		len;
 	char	*ptr;
 
 	len = ft_strlen(src);
@@ -51,7 +51,7 @@ char	*ft_strdup(char *src)
 	ft_strcpy(ptr, src);
 	return (ptr);
 }
-/*
+
 int	main(void)
 {
 	char	src[] = "test";
@@ -68,4 +68,3 @@ int	main(void)
 		printf("Memory allocation failed");
 	return (0);
 }
-*/
