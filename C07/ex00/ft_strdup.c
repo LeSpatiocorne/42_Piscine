@@ -6,7 +6,7 @@
 /*   By: ndruon <ndruon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 15:21:49 by ndruon            #+#    #+#             */
-/*   Updated: 2024/08/05 14:35:48 by ndruon           ###   ########.fr       */
+/*   Updated: 2024/08/05 14:51:39 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-
 char	*ft_strdup(char *src)
 {
 	int		len;
@@ -59,7 +58,7 @@ int	main(void)
 
 	duplicated_str = ft_strdup(src);
 	if (duplicated_str)
-	{	
+	{
 		printf("%s\n", src);
 		printf("%s\n", duplicated_str);
 		free(duplicated_str);

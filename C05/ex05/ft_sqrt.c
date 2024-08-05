@@ -13,30 +13,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-int ft_sqrt_recursive(int nb, int start, int end)
+int	ft_sqrt_recursive(int nb, int start, int end)
 {
+	int	square;
+	int	mid;
+
 	if (start > end)
-		return -1; // Square root not found
-	int mid = (start + end) / 2;
-	int square = mid * mid;
+		return (-1);
+	mid = (start + end) / 2;
+	square = mid * mid;
 	if (square == nb)
-		return mid; // Square root found
+		return (mid);
 	else if (square < nb)
-		return ft_sqrt_recursive(nb, mid + 1, end); // Search in the upper half
+		return (ft_sqrt_recursive(nb, mid + 1, end));
 	else
-		return ft_sqrt_recursive(nb, start, mid - 1); // Search in the lower half
+		return (ft_sqrt_recursive(nb, start, mid - 1));
 }
 
-int ft_sqrt(int nb)
+int	ft_sqrt(int nb)
 {
-	return ft_sqrt_recursive(nb, 0, nb);
+	return (ft_sqrt_recursive(nb, 0, nb));
 }
-
+/*
 int main(void)
 {
 	int number = 8;
 	int result = ft_sqrt(number);
 	printf("The square root of %d is %d\n", number, result);
 	return 0;
-}
+}*/
