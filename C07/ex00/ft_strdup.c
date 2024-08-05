@@ -6,7 +6,7 @@
 /*   By: ndruon <ndruon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 15:21:49 by root              #+#    #+#             */
-/*   Updated: 2024/08/05 08:58:35 by ndruon           ###   ########.fr       */
+/*   Updated: 2024/08/05 14:23:17 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strdup(char *src)
 	ft_strcpy(ptr, src);
 	return (ptr);
 }
-
+/*
 int	main(void)
 {
 	char	src[] = "test";
@@ -68,3 +68,4 @@ int	main(void)
 		printf("Memory allocation failed");
 	return (0);
 }
+*/
