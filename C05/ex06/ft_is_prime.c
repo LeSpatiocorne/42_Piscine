@@ -6,15 +6,15 @@
 /*   By: ndruon <ndruon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 16:52:34 by ndruon            #+#    #+#             */
-/*   Updated: 2024/08/06 17:15:27 by ndruon           ###   ########.fr       */
+/*   Updated: 2024/08/06 17:38:51 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int		ft_is_prime(int nb)
+int	ft_is_prime(int nb)
 {
-	int i;
+	int	i;
 
 	i = 2;
 	if (nb <= 1)
@@ -29,8 +29,10 @@ int		ft_is_prime(int nb)
 	}
 	return (1);
 }
+/*
 int main()
 {
 	printf("%d\n", ft_is_prime(97));
 	return 0;
 }
+*/
