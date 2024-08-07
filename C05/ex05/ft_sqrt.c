@@ -23,7 +23,7 @@ int	ft_sqrt(int nb)
 			return (i);
 		i++;
 	}
-	return (-1);
+	return (0);
 }
 
 /*
