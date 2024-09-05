@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidruon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/05 13:37:35 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/05 13:37:39 by nidruon          ###   ########.fr       */
+/*   Created: 2024/09/05 13:34:05 by nidruon           #+#    #+#             */
+/*   Updated: 2024/09/05 14:15:09 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_print_reverse_alphabet(void)
+void	ft_print_comb(void)
 {
-	char	c;
+	int	a;
+	int	b;
+	int	c;
 
-	c = 'z';
-	while (c >= 'a')
+	a = '0';
+	while (a <= '7')
 	{
-		write(1, &c, 1);
-		c--;
+		b = a + 1;
+		while (b <= '8')
+		{
+			c = b + 1;
+			while (c <= '9')
+			{
+				write(1, &a, 1);
+				write(1, &b, 1);
+				write(1, &c, 1);
+				if (a != '7')
+					write(1, ", ", 2);
+				c++;
+			}
+			b++;
+		}
+		a++;
 	}
 }
-//int main(void){ft_print_reverse_alphabet();return 0;}
+
+//int main(void){ft_print_comb();return (0);}
