@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nidruon <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ndruon <ndruon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 14:20:27 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/05 16:40:08 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/05 16:49:18 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 #include <stdbool.h>
 
@@ -19,11 +20,11 @@ void	ft_putchar(char c)
 
 void	ft_aff_comb(int a, int b, bool t)
 {
-	ft_putchar((a + 48) % 10);
-	ft_putchar((a + 48) / 10);
+	ft_putchar(48 + (a % 10));
+	ft_putchar(48 + (a / 10));
 	ft_putchar(' ');
-	ft_putchar((b + 48) % 10);
-	ft_putchar((b + 48) / 10);
+	ft_putchar(48 + (b % 10));
+	ft_putchar(48 + (b / 10));
 	if (t)
 	{
 		ft_putchar(',');
