@@ -14,14 +14,10 @@
 
 int	ft_strlen(char	*str)
 {
-	int	len;
-
-	len = 0;
-	while (str[len])
-	{
-		len++;
-	}
-	return (len);
+	int	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 /*
 int	main(void)
