@@ -6,18 +6,13 @@
 /*   By: mgobert <mgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 09:19:01 by mgobert           #+#    #+#             */
-/*   Updated: 2024/09/07 16:34:46 by mgobert          ###   ########.fr       */
+/*   Updated: 2024/09/07 16:51:12 by mgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char *c);
 
-void	ft_putchar(char *c)
-{
-	write(1, c, 1);
-}
-
-void	rush(int x, int y)
+void	rush(int y, int x)
 {
 	int	a;
 	int	z;
@@ -44,10 +39,4 @@ void	rush(int x, int y)
 		else
 			z++;
 	}
-}
-
-int	main(void)
-{
-	rush(5, 5);
-	return (0);
 }
