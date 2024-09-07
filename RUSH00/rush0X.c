@@ -6,7 +6,7 @@
 /*   By: mgobert <mgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 09:19:01 by mgobert           #+#    #+#             */
-/*   Updated: 2024/09/07 16:07:24 by mgobert          ###   ########.fr       */
+/*   Updated: 2024/09/07 16:34:46 by mgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,31 +17,32 @@ void	ft_putchar(char *c)
 	write(1, c, 1);
 }
 
-void	rush(int size_x, int size_y)
+void	rush(int x, int y)
 {
-	int	x;
-	int	y;
+	int	a;
+	int	z;
 
-	x = 1;
-	y = 1;
-	while (x <= size_x)
+	a = 1;
+	z = 1;
+	while (a <= x)
 	{
-		if ((x == 1 && y == 1) || (x == size_x && y == 1))
+		if ((a == 1 && z == 1) || (a == x && z == 1))
 			ft_putchar("A");
-		else if ((x == 1 && y == size_y) || (x == size_x && y == size_y))
+		else if ((a == 1 && z == y) || (a == x && z == y))
 			ft_putchar("C");
-		else if ((x > 1 && x < size_x) && (y > 1 && y < size_y - 1 && x == size_x && y == size_y - 1))
+		else if ((z == 1 && a > 1 && a < x) || (z == y && a > 1 && a < x)
+			|| (a == 1 && z > 1 && z < y) || (a == x && z > 1 && z < y))
 			ft_putchar("B");
 		else
 			ft_putchar(" ");
-		if (y == size_y)
+		if (z == y)
 		{
-			y = 1;
-			x++;
+			z = 1;
+			a++;
 			ft_putchar("\n");
 		}
 		else
-			y++;
+			z++;
 	}
 }
 
