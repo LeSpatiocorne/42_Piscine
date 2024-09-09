@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nidruon <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 17:09:53 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/05 17:21:50 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/09 09:54:46 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,29 +17,23 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putnbr(int nb)
+void    ft_putnbr(int n)
 {
-	int	i;
-	long	nbr;
-	char	str[12];
+    long    nb;
 
-	i = 0;
-	nbr = nb;
-	if (nbr < 0)
-	{
-		ft_putchar('-');
-		nbr = -nbr;
-	}
-	if (nbr == 0)
-		write(1, "0", 1);
-	while (nbr != 0)
-	{
-		str[i++] = nbr % 10 + '0';
-		nbr = nbr / 10;
-	}
-	str[i] = '\0';
-	while (i != 0)
-		ft_putchar(str[--i]);
+    nb = n;
+    if (nb < 0)
+    {
+        nb = -nb;
+        write(1, "-", 1);
+    }
+    if (nb < 10)
+        ft_putchar(nb + 48);
+    else
+    {
+        ft_putnbr(nb / 10);
+        ft_putnbr(nb % 10);
+    }
 }
 /*
 int	main(void)
