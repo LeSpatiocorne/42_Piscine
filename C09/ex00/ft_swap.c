@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndruon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/20 17:34:25 by ndruon            #+#    #+#             */
-/*   Updated: 2024/07/22 12:00:48 by ndruon           ###   ########.fr       */
+/*   Created: 2024/07/22 11:58:20 by ndruon            #+#    #+#             */
+/*   Updated: 2024/07/22 11:58:27 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
-int	ft_strlen(char	*str)
+void	ft_swap(int	*a, int	*b)
 {
-	int	i;
+	int	temp;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
-/*
-int	main(void)
-{
-	printf("len is : %d\n", ft_strlen("Hello"));
-	return 0;
-}*/

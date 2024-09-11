@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 12:08:00 by root              #+#    #+#             */
-/*   Updated: 2024/07/24 14:03:02 by root             ###   ########.fr       */
+/*   Updated: 2024/09/09 21:17:12 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,3 +50,18 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		dest[dest_len + i] = '\0';
 	return (src_len + dist);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char src[] = "test";
+	char dest[100];
+	unsigned int size = 5;
+
+	printf("fonction ft : %u\n", ft_strlcat(dest, src, size));
+	printf("originale : %lu\n", strlcat(dest, src, size));
+	return 0;
+}
+*/

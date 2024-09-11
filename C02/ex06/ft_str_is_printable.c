@@ -20,7 +20,7 @@ int	ft_str_is_printable(char	*str)
 	len = 0;
 	while (str[len])
 	{
-		if (!(str[len] > 31 && str[len] < 127))
+		if (!(str[len] > 31))
 			return (0);
 		len++;
 	}
@@ -30,7 +30,7 @@ int	ft_str_is_printable(char	*str)
 int     main(void)
 {
         char str1[] = "Hello, world!";
-        char str2[] = "Hello\x7Fworld!"; 
+        char str2[] = "Hello\x7Fworld!";
 	// \x7F est "DEL", il n'est pas printable
 
         printf("Test %s: %d\n", str1, ft_str_is_printable(str1)); // 1

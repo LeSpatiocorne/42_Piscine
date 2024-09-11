@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "configurations": [
+    {
+      "name": "C Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceRoot}/a.out",
+      "preLaunchTask": "build",
+      "internalConsoleOptions": "openOnSessionStart",
+      "logging": {
+        "moduleLoad": false,
+        "programOutput": true,
+        "trace": false
+      },
+      "showDisplayString": false,
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceRoot}",
+      "environment": [],
+      "externalConsole": true,
+      "osx": {
+        "MIMode": "lldb"
+      }
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/lespatiocorne/Documents/GitHub/42_Projects/RUSH00/rush00",
+      "program": "/Users/lespatiocorne/Documents/GitHub/42_Projects/RUSH00/rush00/build/Debug/outDebug"
+    }
+  ]
+}

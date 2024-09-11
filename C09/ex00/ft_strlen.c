@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
 int	ft_strlen(char	*str)
 {
 	int	i;
@@ -22,9 +19,3 @@ int	ft_strlen(char	*str)
 		i++;
 	return (i);
 }
-/*
-int	main(void)
-{
-	printf("len is : %d\n", ft_strlen("Hello"));
-	return 0;
-}*/
