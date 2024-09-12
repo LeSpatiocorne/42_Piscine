@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndruon <ndruon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 14:35:24 by ndruon            #+#    #+#             */
-/*   Updated: 2024/08/05 14:52:53 by ndruon           ###   ########.fr       */
+/*   Updated: 2024/09/12 13:45:04 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	*ft_range(int min, int max)
 	int	*range;
 
 	i = 0;
-	min++;
 	if (min >= max)
 		return (NULL);
 	range = malloc(sizeof(int) * (max - min));
@@ -31,14 +30,14 @@ int	*ft_range(int min, int max)
 /*
 int main(void)
 {
-    int min = 5;
-    int max = 12;
+    int min = 0;
+    int max = 5;
     int *result = ft_range(min, max);
 
     printf("min: %d\nmax: %d\nresult: ", min, max);
     if (result)
     {
-        for (int i = 0; i < max - min - 1; i++)
+        for (int i = 0; i < max - min; i++)
             printf("%d ", result[i]);
         free(result);
     }
