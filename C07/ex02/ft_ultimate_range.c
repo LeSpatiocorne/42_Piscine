@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 14:36:03 by ndruon            #+#    #+#             */
-/*   Updated: 2024/09/12 13:45:32 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/15 14:25:26 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ int	ft_ultimate_range(int **range, int min, int max)
 		(*range)[i++] = min++;
 	return (i);
 }
+
 /*
 int main(void)
 {
-    int min = 5;
+    int min = 0;
     int max = 12;
     int *result;
     int size = ft_ultimate_range(&result, min, max);
@@ -47,5 +48,4 @@ int main(void)
     else
         printf("Memory allocation failed");
     return 0;
-}
-*/
+}*/
