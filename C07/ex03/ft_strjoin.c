@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 14:10:00 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/16 09:04:24 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/17 16:11:14 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	result[result_index] = '\0';
 	return (result);
 }
-/*
+
+
 int	main(int argc, char **argv)
 {
 	char	*joined_str;
@@ -67,4 +68,4 @@ int	main(int argc, char **argv)
 	printf("Chaîne concaténée : %s\n", joined_str);
 	free(joined_str);
 	return (0);
-}*/
+}
