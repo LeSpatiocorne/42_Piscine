@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:32:21 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/18 16:40:03 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/19 12:17:50 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 /* ---------------------------------------------------------- */
 /*                      partie test                           */
 /* ---------------------------------------------------------- */
+/*
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -134,4 +135,4 @@ int	main(int ac, char **av)
 	ft_show_tab(ft_strs_to_tab(ac, av));
 	return 0;
 }
-
+*/

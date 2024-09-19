@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:32:28 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/18 16:40:54 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/19 00:25:47 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
+
 void	ft_putstr(char *str)
 {
 	int	i;
@@ -31,10 +32,9 @@ void	ft_putstr(char *str)
 	}
 }
 
-
 void	ft_putnbr(int n)
 {
-	long nb;
+	long	nb;
 
 	nb = n;
 	if (nb < 0)
@@ -65,6 +65,5 @@ void	ft_show_tab(struct s_stock_str *par)
 		ft_putstr(par[i].copy);
 		write(1, "\n", 1);
 		i++;
-
 	}
 }
