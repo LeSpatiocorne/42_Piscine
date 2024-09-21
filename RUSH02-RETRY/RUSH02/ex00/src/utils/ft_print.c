@@ -12,7 +12,17 @@
 
 #include "../../includes/ft.h"
 
-void	ft_str_numbers(char *str);
+void	ft_print_tens(char *str, t_list *dict, int i)
+{
+	if (str[1] == '0')
+		ft_putstr(dict[20 + i].val);
+	else
+	{
+		ft_putstr(dict[20 + i].val);
+		ft_putchar('-');
+		ft_convert_numeric(str[1], dict);
+	}
+}
 
 void	ft_print(char *str)
 {
@@ -22,16 +32,22 @@ void	ft_print(char *str)
 	char	*dest;
 
 	i = 0;
-	while (str[i] < 48 || str[i] > 57)
+	while (str[i] && (str[i] < '0' || str[i] > '9'))
 		ft_putchar(str[i++]);
-	j = -1;
+	j = i - 1;
 	size = 0;
-	while (j++, str[j] >= 48 && str[j] <= 57)
+	while (j++, str[j] >= '0' && str[j] <= '9')
 		size++;
-	dest = malloc((size + 1) * sizeof(char));
-	j = 0;
-	while (str[i] >= 48 && str[i] <= 57)
-		dest[j++] = str[i++];
-	dest[j] = '\0';
-	ft_str_numbers(dest);
+	if (size > 0)
+	{
+		dest = malloc((size + 1) * sizeof(char));
+		j = 0;
+		while (str[i] >= '0' && str[i] <= '9')
+			dest[j++] = str[i++];
+		dest[j] = '\0';
+		ft_str_numbers(dest);
+		free(dest);
+	}
+	if (str[i])
+		ft_print(str + i);
 }

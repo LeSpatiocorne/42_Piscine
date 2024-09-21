@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_numbers.c                                       :+:      :+:    :+:   */
+/*   ft_convert_numbers.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 22:43:38 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/21 22:47:50 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 00:45:41 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft.h"
-
-int	ft_strcmp(char *s1, char *s2);
 
 void	ft_convert_numeric(char c, t_list *dict)
 {
@@ -36,7 +34,6 @@ void	ft_convert_numeric(char c, t_list *dict)
 		ft_putstr(dict[8].val);
 	else if (c == '9')
 		ft_putstr(dict[9].val);
-	ft_putchar(' ');
 }
 
 void	ft_convert_teens(char *str, t_list *dict)
@@ -58,13 +55,9 @@ void	ft_convert_teens(char *str, t_list *dict)
 	while (i < 10)
 	{
 		if (ft_strcmp(str, teens[i]) == 0)
-		{
 			ft_putstr(dict[10 + i].val);
-			break ;
-		}
 		i++;
 	}
-	ft_putchar(' ');
 }
 
 void	ft_convert_tens(char *str, t_list *dict)
@@ -83,47 +76,52 @@ void	ft_convert_tens(char *str, t_list *dict)
 	i = -1;
 	while (i++, i < 8)
 	{
-		if (ft_strcmp(str, tens[i]) == 0
-			|| (str[0] == tens[i][0] && str[1] != '0'))
-			ft_putstr(dict[20 + i].val);
+		if (str[0] == tens[i][0])
+			ft_print_tens(str, dict, i);
 	}
-	if (str[1] != '0')
-	{
-		ft_putchar('-');
-		ft_convert_numeric(str[1], dict);
-	}
-	ft_putchar(' ');
 }
 
-void	ft_str_numbers(char *str)
+void	ft_convert_hundreds(char *str, t_list *dict)
+{
+	if (str[0] != '0')
+	{
+		ft_convert_numeric(str[0], dict);
+		ft_putchar(' ');
+		ft_putstr(dict[28].val);
+		if (str[1] != '0' || str[2] != '0')
+			ft_putchar(' ');
+	}
+	if (str[1] != '0' || str[2] != '0')
+	{
+		if (str[1] == '1')
+			ft_convert_teens(str + 1, dict);
+		else if (str[1] != '0')
+			ft_convert_tens(str + 1, dict);
+		else if (str[2] != '0')
+			ft_convert_numeric(str[2], dict);
+	}
+}
+
+void	ft_convert_large(char *str, t_list *dict, int size)
 {
 	int		i;
-	t_list	*dict;
+	char	group[4];
+	int		group_count;
+	int		first;
 
-	i = 0;
-	dict = process("numbers.dict");
-	while (str[i])
+	group_count = (size - 1) / 3;
+	i = size % 3;
+	if (i == 0)
+		i = 3;
+	first = 1;
+	while (size > 0)
 	{
-		if (str[i] == '1' && str[i + 1] >= '0' && str[i + 1] <= '9')
-		{
-			ft_convert_teens(&str[i], dict);
-			i += 2;
-		}
-		else if (str[i] >= '2' && str[i] <= '9'
-			&& str[i + 1] >= '0' && str[i + 1] <= '9')
-		{
-			ft_convert_tens(&str[i], dict);
-			i += 2;
-		}
-		else if (str[i] >= '0' && str[i] <= '9')
-		{
-			ft_convert_numeric(str[i], dict);
-			i++;
-		}
-		else
-		{
-			ft_putchar(str[i]);
-			i++;
-		}
+		ft_strncpy(group, str, i);
+		group[i] = '\0';
+		ft_pcs_lgrp(group, dict, group_count, &first);
+		str += i;
+		size -= i;
+		i = 3;
+		group_count--;
 	}
 }

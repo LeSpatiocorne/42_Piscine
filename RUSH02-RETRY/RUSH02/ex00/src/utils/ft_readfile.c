@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 22:48:51 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/21 22:48:53 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 00:58:41 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_getval(int fd, char *c)
 
 	str = malloc(sizeof(char) * 128);
 	if (!(str))
-		exit(1);
+		ft_error(2);
 	i = 0;
 	while (c[0] != '\n')
 	{
@@ -63,7 +63,7 @@ t_list	*process(char *file)
 	fd = open(file, O_RDONLY);
 	tab = malloc(sizeof(t_list) * 43);
 	if (fd == -1 || !(tab))
-		exit(1);
+		ft_error(1);
 	i = 0;
 	while (i < 41)
 	{

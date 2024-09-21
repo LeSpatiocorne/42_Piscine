@@ -12,8 +12,11 @@
 
 #include "../../includes/ft.h"
 
-void	ft_error(int error_code)
+int	ft_error(int error_code)
 {
-	if (error_code == 418)
-		ft_putstr("Oh no something went wrong !\nI'm a teapot now.\n");
+	if (error_code == 1)
+		ft_putstr("Dict Error\n");
+	else if (error_code == 2)
+		ft_putstr("Malloc Error\n");
+	return (1);
 }
