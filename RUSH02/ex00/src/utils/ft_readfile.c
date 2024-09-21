@@ -1,51 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_readfile.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fullgreen <fullgreen@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/03 14:43:25 by fullgreen         #+#    #+#             */
-/*   Updated: 2024/08/04 16:25:28 by fullgreen        ###   ########.fr       */
+/*   Created: 2024/08/04 14:08:44 by fullgreen         #+#    #+#             */
+/*   Updated: 2024/08/04 16:19:18 by fullgreen        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft.h"
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include "../../includes/ft.h"
 
-int	is_alpha(char *str)
+t_list	*process(char *file)
 {
-	int	i;
+	long	i;
+	int		fd;
+	char	c[1];
+	t_list	*tab;
+	char	*tmp;
 
+	fd = open(file, O_RDONLY);
+	tab = malloc(sizeof(t_list) * 43);
+	if (fd == -1 || !(tab))
+		exit(1);
 	i = 0;
-	while (str[i])
+	while (i < 41)
 	{
-		if (str[i] < '0' || str[i] > '9')
-			return (1);
+		tab[i].nb = ft_atoi(ft_getnb(fd));
+		read(fd, c, 1);
+		while (c[0] == ' ' || c[0] == ':')
+			read(fd, c, 1);
+		tmp = ft_getval(fd, c);
+		tab[i].val = ft_strdup(tmp);
+		free(tmp);
 		i++;
 	}
-	return (0);
-}
-
-int	main(int ac, char **av)
-{
-	t_list	*tab;
-	int		*first;
-	int		addr_first;
-
-	addr_first = 1;
-	first = &addr_first;
-	if (ac == 2)
-	{
-		if (ft_atoi(av[1]) < 0 || is_alpha(av[1]))
-		{
-			write(1, "Error\n", 6);
-			return (0);
-		}
-		tab = process("numbers.dict");
-		ft_print(ft_atoi(av[1]), tab, first);
-	}
-	return (0);
+	close(fd);
+	return (tab);
 }

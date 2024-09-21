@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fullgreen <fullgreen@student.42.fr>        +#+  +:+       +#+        */
+/*   By: sapupier <sapupier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 15:59:16 by fullgreen         #+#    #+#             */
-/*   Updated: 2024/08/03 15:59:43 by fullgreen        ###   ########.fr       */
+/*   Updated: 2024/08/04 14:47:06 by sapupier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 void	ft_print(int n, t_list *tab, int *first)
 {
-	int i;
-	int mult;
+	int	i;
+	int	mult;
 
 	i = 0;
 	mult = getmult(n);

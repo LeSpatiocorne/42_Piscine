@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:32:21 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/19 12:17:50 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/19 16:21:55 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,9 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 /* ---------------------------------------------------------- */
 /*                      partie test                           */
 /* ---------------------------------------------------------- */
-/*
+
 #include <unistd.h>
+#include <stdio.h>
 
 void	ft_putchar(char c)
 {
@@ -106,10 +107,10 @@ void	ft_putnbr(int n)
 	}
 	if (nb < 10)
 		ft_putchar(nb + 48);
-	if (nb > 10)
+	if (nb >= 10)
 	{
-		ft_putnbr(nb % 10);
 		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
 	}
 }
 
@@ -127,7 +128,6 @@ void	ft_show_tab(struct s_stock_str *par)
 		ft_putstr(par[i].copy);
 		write(1, "\n", 1);
 		i++;
-
 	}
 }
 int	main(int ac, char **av)
@@ -135,4 +135,3 @@ int	main(int ac, char **av)
 	ft_show_tab(ft_strs_to_tab(ac, av));
 	return 0;
 }
-*/

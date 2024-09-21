@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fullgreen <fullgreen@student.42.fr>        +#+  +:+       +#+        */
+/*   By: sapupier <sapupier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 15:55:01 by fullgreen         #+#    #+#             */
-/*   Updated: 2024/08/03 15:58:51 by fullgreen        ###   ########.fr       */
+/*   Updated: 2024/08/04 14:46:49 by sapupier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 void	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])

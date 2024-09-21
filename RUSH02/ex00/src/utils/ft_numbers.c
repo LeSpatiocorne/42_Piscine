@@ -1,19 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nums.c                                          :+:      :+:    :+:   */
+/*   ft_numbers.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fullgreen <fullgreen@student.42.fr>        +#+  +:+       +#+        */
+/*   By: sapupier <sapupier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/03 16:24:41 by fullgreen         #+#    #+#             */
-/*   Updated: 2024/08/03 16:29:19 by fullgreen        ###   ########.fr       */
+/*   Created: 2024/08/04 14:01:41 by fullgreen         #+#    #+#             */
+/*   Updated: 2024/08/04 14:47:18 by sapupier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "../../includes/ft.h"
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
 
 int	getdec(int nb)
 {
@@ -41,20 +36,14 @@ int	getdec(int nb)
 
 int	getmult(int nb)
 {
-	if (nb >= 100)
+	if (nb >= 1000000000)
+		return (1000000000);
+	else if (nb >= 1000000)
+		return (1000000);
+	else if (nb >= 1000)
+		return (1000);
+	else if (nb >= 100)
 		return (100);
-    else if (nb >= 1000)
-        return (1000);
-    else if (nb >= 1000000)
-        return (1000000);
-    else if (nb >= 1000000000)
-        return (1000000000);
-    else if (nb >= 1000000000000)
-        return (1000000000000);
-    else if (nb >= 1000000000000000)
-        return (1000000000000000);
-    else if (nb >= 1000000000000000000)
-        return (1000000000000000000);
-    else
-	    return (getdec(nb));
+	else
+		return (getdec(nb));
 }
