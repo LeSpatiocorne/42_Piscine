@@ -19,6 +19,7 @@ void	ft_putstr(char *str);
 char	*ft_getnb(int fd);
 char	*ft_getval(int fd, char *c);
 int		ft_strlen(char	*str);
+int		ft_strcmp(char *s1, char *s2);
 void	ft_error(int error_code);
 void	ft_print(char *str);
 void	ft_str_numbers(char *str);
