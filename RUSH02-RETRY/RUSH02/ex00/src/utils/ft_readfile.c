@@ -18,7 +18,7 @@ t_list	*process(char *file)
 	i = 0;
 	while (i < 41)
 	{
-		tab[i].nb = ft_atoi(ft_getnb(fd));
+		tab[i].nb = t_getnb(fd);
 		read(fd, c, 1);
 		while (c[0] == ' ' || c[0] == ':')
 			read(fd, c, 1);

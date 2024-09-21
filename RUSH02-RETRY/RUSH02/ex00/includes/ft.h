@@ -3,7 +3,7 @@
 
 typedef struct s_list
 {
-	int		nb;
+	char	*nb;
 	char	*val;
 }		t_list;
 void	ft_print(int n, t_list *tab, int *first);
