@@ -6,7 +6,7 @@
 /*   By: ndruon <ndruon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 13:34:55 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/21 17:51:51 by ndruon           ###   ########.fr       */
+/*   Updated: 2024/09/21 20:40:33 by ndruon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,3 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
-//int	main(void){ft_putchar('d');return 0;}

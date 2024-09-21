@@ -1,23 +1,25 @@
 #include "../../includes/ft.h"
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
 
-void	ft_print(int n, t_list *tab, int *first)
+void ft_str_numbers(char *str);
+
+void	ft_print(char *str)
 {
-	int	i;
-	int	mult;
+	int		i;
+	int		j;
+	int		size;
+	char	*dest;
 
 	i = 0;
-	mult = getmult(n);
-	if (mult >= 100)
-		ft_print(n / mult, tab, first);
-	if (*first == 0)
-		write(1, " ", 1);
-	*first = 0;
-	while (tab[i].nb != mult)
-		i++;
-	ft_putstr(tab[i].val);
-	if (mult != 0 && n % mult != 0)
-		ft_print(n % mult, tab, first);
+	while(str[i] < 48 || str[i] > 57)
+		ft_putchar(str[i++]);
+	j = -1;
+	size = 0;
+	while(j++, str[j] >= 48 && str[j] <= 57)
+		size++;
+	dest = malloc((size + 1) * sizeof(char));
+	j = 0;
+	while(str[i] >= 48 && str[i] <= 57)
+		dest[j++] = str[i++];
+	dest[j] = '\0';
+	ft_str_numbers(dest);
 }

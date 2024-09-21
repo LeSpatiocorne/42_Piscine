@@ -1,7 +1,7 @@
 
 NAME = rush-02
 
-SRCS = src/*.c src/utils/*.c
+SRCS = src/main.c src/utils/*.c
 
 OBJS = ${SRC:.c=.o}
 

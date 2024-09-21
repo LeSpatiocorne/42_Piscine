@@ -1,7 +1,4 @@
 #include "../../includes/ft.h"
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
 
 void	ft_putstr(char *str)
 {
