@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/21 22:44:20 by nidruon           #+#    #+#             */
+/*   Updated: 2024/09/21 22:44:20 by nidruon          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/ft.h"
 
-void ft_str_numbers(char *str);
+void	ft_str_numbers(char *str);
 
 void	ft_print(char *str)
 {
@@ -10,15 +22,15 @@ void	ft_print(char *str)
 	char	*dest;
 
 	i = 0;
-	while(str[i] < 48 || str[i] > 57)
+	while (str[i] < 48 || str[i] > 57)
 		ft_putchar(str[i++]);
 	j = -1;
 	size = 0;
-	while(j++, str[j] >= 48 && str[j] <= 57)
+	while (j++, str[j] >= 48 && str[j] <= 57)
 		size++;
 	dest = malloc((size + 1) * sizeof(char));
 	j = 0;
-	while(str[i] >= 48 && str[i] <= 57)
+	while (str[i] >= 48 && str[i] <= 57)
 		dest[j++] = str[i++];
 	dest[j] = '\0';
 	ft_str_numbers(dest);

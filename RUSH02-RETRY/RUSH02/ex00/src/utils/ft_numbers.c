@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_numbers.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/21 22:43:38 by nidruon           #+#    #+#             */
+/*   Updated: 2024/09/21 22:47:50 by nidruon          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/ft.h"
 
 int	ft_strcmp(char *s1, char *s2);
@@ -26,6 +38,7 @@ void	ft_convert_numeric(char c, t_list *dict)
 		ft_putstr(dict[9].val);
 	ft_putchar(' ');
 }
+
 void	ft_convert_teens(char *str, t_list *dict)
 {
 	int		i;
@@ -47,12 +60,13 @@ void	ft_convert_teens(char *str, t_list *dict)
 		if (ft_strcmp(str, teens[i]) == 0)
 		{
 			ft_putstr(dict[10 + i].val);
-			break;
+			break ;
 		}
 		i++;
 	}
 	ft_putchar(' ');
 }
+
 void	ft_convert_tens(char *str, t_list *dict)
 {
 	int		i;
@@ -95,7 +109,8 @@ void	ft_str_numbers(char *str)
 			ft_convert_teens(&str[i], dict);
 			i += 2;
 		}
-		else if (str[i] >= '2' && str[i] <= '9' && str[i + 1] >= '0' && str[i + 1] <= '9')
+		else if (str[i] >= '2' && str[i] <= '9'
+			&& str[i + 1] >= '0' && str[i + 1] <= '9')
 		{
 			ft_convert_tens(&str[i], dict);
 			i += 2;
@@ -112,4 +127,3 @@ void	ft_str_numbers(char *str)
 		}
 	}
 }
-
