@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 23:02:17 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/22 00:54:40 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 12:36:36 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include <stdio.h>
 
 typedef struct s_list
 {

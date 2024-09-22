@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 22:49:10 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/21 22:49:12 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 12:59:54 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strdup(char *src)
 	char	*dest;
 
 	len = 0;
-	dest = (char *)malloc(sizeof(char) * (len + 1));
 	while (src[len] != '\0')
 		len++;
+	dest = (char *)malloc(sizeof(char) * (len + 1));
 	if (!(dest))
 		return (0);
 	i = 0;

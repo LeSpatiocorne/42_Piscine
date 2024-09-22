@@ -15,8 +15,12 @@
 int	ft_error(int error_code)
 {
 	if (error_code == 1)
-		ft_putstr("Dict Error\n");
+		ft_putstr("ERROR : Something is wrong with the Dict.");
 	else if (error_code == 2)
-		ft_putstr("Malloc Error\n");
-	return (1);
+		ft_putstr("ERROR : Memory allocation don't work as expected.");
+	else if (error_code == 3)
+		ft_putstr("ERROR : Number is too large or argument not valid.");
+	else if (error_code == 4)
+		ft_putstr("ERROR : Argument count is not 2.\nUsage : ./rush-02 [number]");
+	exit(1);
 }

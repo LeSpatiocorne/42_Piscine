@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 22:48:51 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/22 00:58:41 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 13:59:36 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,8 @@ t_list	*process(char *file)
 	tab = malloc(sizeof(t_list) * 43);
 	if (fd == -1 || !(tab))
 		ft_error(1);
-	i = 0;
-	while (i < 41)
+	i = -1;
+	while (i++, (i < 41))
 	{
 		tab[i].nb = ft_getnb(fd);
 		read(fd, c, 1);
@@ -74,7 +74,6 @@ t_list	*process(char *file)
 		tmp = ft_getval(fd, c);
 		tab[i].val = ft_strdup(tmp);
 		free(tmp);
-		i++;
 	}
 	close(fd);
 	return (tab);

@@ -24,30 +24,48 @@ void	ft_print_tens(char *str, t_list *dict, int i)
 	}
 }
 
-void	ft_print(char *str)
+void	ft_extract_numbers(char *str, char **dest)
 {
 	int		i;
 	int		j;
 	int		size;
-	char	*dest;
 
 	i = 0;
 	while (str[i] && (str[i] < '0' || str[i] > '9'))
-		ft_putchar(str[i++]);
+		i++;
 	j = i - 1;
 	size = 0;
 	while (j++, str[j] >= '0' && str[j] <= '9')
 		size++;
-	if (size > 0)
+	if (size > 0 && size <= 39)
 	{
-		dest = malloc((size + 1) * sizeof(char));
+		*dest = malloc((size + 1) * sizeof(char));
 		j = 0;
 		while (str[i] >= '0' && str[i] <= '9')
-			dest[j++] = str[i++];
-		dest[j] = '\0';
+			(*dest)[j++] = str[i++];
+		(*dest)[j] = '\0';
+	}
+	else
+	{
+		*dest = NULL;
+		ft_error(3);
+	}
+}
+
+void	ft_print(char *str)
+{
+	char	*dest;
+
+	while (*str && (*str < '0' || *str > '9'))
+		ft_putchar(*str++);
+	ft_extract_numbers(str, &dest);
+	if (dest)
+	{
 		ft_str_numbers(dest);
 		free(dest);
+		while (*str >= '0' && *str <= '9')
+			str++;
 	}
-	if (str[i])
-		ft_print(str + i);
+	if (*str)
+		ft_print(str);
 }
