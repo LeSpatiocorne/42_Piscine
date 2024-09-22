@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/lespatiocorne/Documents/GitHub/42_Projects/RUSH02/SEPTEMBER24/ex00/src",
+      "program": "/Users/lespatiocorne/Documents/GitHub/42_Projects/RUSH02/SEPTEMBER24/ex00/src/build/Debug/outDebug"
+    }
+  ]
+}
