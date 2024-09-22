@@ -6,18 +6,18 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 23:17:07 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/22 00:12:55 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 15:48:10 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft.h"
 
-void	ft_str_numbers(char *str)
+void	ft_str_numbers(char *str, char *file)
 {
 	t_list	*dict;
 	int		size;
 
-	dict = process("numbers.dict");
+	dict = process(file);
 	size = ft_strlen(str);
 	if (size == 1)
 		ft_convert_numeric(str[0], dict);

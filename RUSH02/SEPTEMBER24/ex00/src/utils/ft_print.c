@@ -52,20 +52,24 @@ void	ft_extract_numbers(char *str, char **dest)
 	}
 }
 
-void	ft_print(char *str)
+void	ft_print(char *str, char *file)
 {
 	char	*dest;
 
 	while (*str && (*str < '0' || *str > '9'))
+	{
+		if (*str == '-' && (*(str + 1) >= '0' && *(str + 1) <= '9'))
+			ft_error(3);
 		ft_putchar(*str++);
+	}
 	ft_extract_numbers(str, &dest);
 	if (dest)
 	{
-		ft_str_numbers(dest);
+		ft_str_numbers(dest, file);
 		free(dest);
 		while (*str >= '0' && *str <= '9')
 			str++;
 	}
 	if (*str)
-		ft_print(str);
+		ft_print(str, file);
 }

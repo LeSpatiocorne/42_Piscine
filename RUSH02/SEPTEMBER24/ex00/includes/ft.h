@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 23:02:17 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/22 12:36:36 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 15:49:00 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ char	*ft_getval(int fd, char *c);
 int		ft_strlen(char	*str);
 int		ft_strcmp(char *s1, char *s2);
 int		ft_error(int error_code);
-void	ft_print(char *str);
+void	ft_print(char *str, char *file);
 void	ft_print_tens(char *str, t_list *dict, int i);
-void	ft_str_numbers(char *str);
+void	ft_str_numbers(char *str, char *file);
 void	ft_convert_numeric(char str, t_list *dict);
 void	ft_convert_teens(char *str, t_list *dict);
 void	ft_convert_tens(char *str, t_list *dict);
