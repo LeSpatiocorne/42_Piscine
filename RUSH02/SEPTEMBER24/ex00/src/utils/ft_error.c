@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 22:44:02 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/21 22:44:02 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 15:20:00 by jotudela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int	ft_error(int error_code)
 	else if (error_code == 3)
 		ft_putstr("ERROR : Number is too large or argument not valid.");
 	else if (error_code == 4)
-		ft_putstr("ERROR : Argument count is not 2.\nUsage : ./rush-02 [number]");
+		ft_putstr("ERROR : Argument count is not 2.");
 	exit(1);
 }
