@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 23:17:07 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/22 15:48:10 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 17:47:48 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ void	ft_str_numbers(char *str, char *file)
 		ft_convert_hundreds(str, dict);
 	else
 		ft_convert_large(str, dict, size);
-	free(dict);
+	free_dict(dict, 41);
 }

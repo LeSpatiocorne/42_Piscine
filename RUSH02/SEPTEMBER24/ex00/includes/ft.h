@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 23:02:17 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/22 15:49:00 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 17:47:12 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct s_list
 }		t_list;
 
 t_list	*process(char *file);
+void	free_dict(t_list *dict, int size);
 void	ft_putchar(char c);
 char	*ft_strdup(char *src);
 void	ft_putstr(char *str);

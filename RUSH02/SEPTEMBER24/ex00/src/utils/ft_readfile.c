@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 22:48:51 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/22 13:59:36 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 17:46:57 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,18 @@ t_list	*process(char *file)
 	}
 	close(fd);
 	return (tab);
+}
+
+void	free_dict(t_list *dict, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		free(dict[i].nb);
+        free(dict[i].val);
+		i++;
+	}
+	free(dict);
 }
