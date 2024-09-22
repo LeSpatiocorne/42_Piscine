@@ -46,12 +46,12 @@ char	*ft_atoi(char *str)
 	if (!result)
 		return (NULL);
 	i = -1;
-	while (i++, str[start + i] && str[start + i] >= '0' && str[start + i] <= '9')
+	while (i++, str[start + i]
+		&& str[start + i] >= '0' && str[start + i] <= '9')
 		result[i] = str[start + i];
 	result[i] = '\0';
 	return (result);
 }
-
 
 void	ft_print(char *str, char *file)
 {

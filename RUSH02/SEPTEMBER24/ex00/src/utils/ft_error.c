@@ -19,7 +19,7 @@ int	ft_error(int error_code)
 	else if (error_code == 2)
 		ft_putstr("ERROR : Memory allocation don't work as expected.");
 	else if (error_code == 3)
-		ft_putstr("ERROR : Number is too large or argument not valid.");
+		ft_putstr("ERROR : Number or argument not valid.");
 	else if (error_code == 4)
 		ft_putstr("ERROR : Argument count is not 2.");
 	exit(1);
