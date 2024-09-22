@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 22:48:51 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/22 18:09:20 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 18:14:00 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	free_dict(t_list *dict, int size)
 	while (i < size)
 	{
 		free(dict[i].nb);
-        free(dict[i].val);
+		free(dict[i].val);
 		i++;
 	}
 	free(dict);
