@@ -12,7 +12,7 @@
 
 #include "../../includes/ft.h"
 
-int	ft_error(int error_code)
+int	ft_error(int error_code, t_list *dict)
 {
 	if (error_code == 1)
 		ft_putstr("ERROR : Something is wrong with the Dict.");
@@ -22,5 +22,7 @@ int	ft_error(int error_code)
 		ft_putstr("ERROR : Number or argument not valid.");
 	else if (error_code == 4)
 		ft_putstr("ERROR : Argument count is not 2.");
+	if (dict != 0)
+		free_dict(dict, 41);
 	exit(1);
 }

@@ -36,12 +36,12 @@ char	*ft_atoi(char *str)
 	if (str[i] == '+')
 		i++;
 	else if (str[i] == '-' || str[i] == '+')
-		ft_error(3);
+		ft_error(3, 0);
 	start = i;
 	while (str[i] >= '0' && str[i] <= '9')
 		i++;
 	if (i == start)
-		ft_error(3);
+		ft_error(3, 0);
 	result = (char *)malloc(sizeof(char) * (i - start + 1));
 	if (!result)
 		return (NULL);
@@ -68,9 +68,9 @@ void	ft_print(char *str, char *file)
 		else
 		{
 			free(dest);
-			ft_error(3);
+			ft_error(3, 0);
 		}
 	}
 	else
-		ft_error(3);
+		ft_error(3, 0);
 }

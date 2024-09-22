@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 22:48:51 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/22 17:46:57 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 18:09:20 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ char	*ft_getnb(int fd)
 	return (str);
 }
 
-char	*ft_getval(int fd, char *c)
+char	*ft_getval(int fd, char *c, t_list *dict)
 {
 	int		i;
 	char	*str;
 
 	str = malloc(sizeof(char) * 128);
 	if (!(str))
-		ft_error(2);
+		ft_error(2, dict);
 	i = 0;
 	while (c[0] != '\n')
 	{
@@ -63,7 +63,7 @@ t_list	*process(char *file)
 	fd = open(file, O_RDONLY);
 	tab = malloc(sizeof(t_list) * 43);
 	if (fd == -1 || !(tab))
-		ft_error(1);
+		ft_error(1, 0);
 	i = -1;
 	while (i++, (i < 41))
 	{
@@ -71,7 +71,7 @@ t_list	*process(char *file)
 		read(fd, c, 1);
 		while (c[0] == ' ' || c[0] == ':')
 			read(fd, c, 1);
-		tmp = ft_getval(fd, c);
+		tmp = ft_getval(fd, c, tab);
 		tab[i].val = ft_strdup(tmp);
 		free(tmp);
 	}
