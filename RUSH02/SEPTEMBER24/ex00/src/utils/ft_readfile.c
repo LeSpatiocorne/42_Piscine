@@ -6,7 +6,7 @@
 /*   By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 22:48:51 by nidruon           #+#    #+#             */
-/*   Updated: 2024/09/22 18:14:00 by nidruon          ###   ########.fr       */
+/*   Updated: 2024/09/22 18:23:03 by nidruon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char	*ft_getnb(int fd)
 		read(fd, c, 1);
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
 
@@ -49,6 +50,7 @@ char	*ft_getval(int fd, char *c, t_list *dict)
 		read(fd, c, 1);
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
 
