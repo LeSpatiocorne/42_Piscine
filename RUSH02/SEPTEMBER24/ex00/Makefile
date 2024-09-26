@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jotudela <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/21 10:06:39 by jotudela          #+#    #+#              #
-#    Updated: 2024/09/22 15:12:48 by nidruon          ###   ########.fr        #
+#    Updated: 2024/09/25 17:13:04 by nidruon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,10 +55,6 @@ OBJ_FILES	:= $(SRC_FILES:.c=.o)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(OBJ_FILES)
-	@echo "\n$(BOLD)$(RED)		Compiling $(NAME)...		$(RESET)"
-	@echo "\n"
-	$(CC) $(OBJ_FILES) -o $(NAME)
-	@echo "\n$(BOLD)$(GREEN)		$(NAME) fully compiled, ready to use		$(RESET)\n"
 
 $(NAME): all
 
