@@ -40,3 +40,11 @@ Ces explications sont faites à partir de mes connaissances propres, ne les buve
 |    C11     |  ❌       |
 |    C12     |  ❌       |
 |    C13     |  ❌       |
+
+### Notes d'exams
+|   Module   | PISCINE | RETRY |
+|------------|---------|------------|
+|   Exam00   | ✅ 40%  | ✅ 100% |
+|   Exam01   | ✅ 40%  | ✅ 80%  |
+|   Exam02   | ✅ 40%  | ✅ 80%  |
+|   ExamFI   | ✅ 54%  | ✅ 66%  |
