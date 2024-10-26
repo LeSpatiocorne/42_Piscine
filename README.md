@@ -20,7 +20,7 @@ man ascii / man limits.h (attention l'int min c'est -2 147 483 648, le man dit u
 ### NOUVEAU !
 
 Ce repo comporte à présent des explications sur le code pour vous aider dans votre apprentissage.
-Ces explications sont faites à partir de mes connaissances propres, ne les buvez pas comme un savoir universel, pensez à couper ces descrption avec internet et les documentations officielles de C. Comme vous j'apprends encore ! J'essaie simplement de poser sur papier les choses que je "pense" savoir et qui m'ont permis d'expliquer durant ma piscine à mes pairs mon code !
+Ces explications sont faites à partir de mes connaissances propres, ne les buvez pas comme un savoir universel, pensez à couper ces descriptions avec internet et les documentations officielles de C. Comme vous j'apprends encore ! J'essaie simplement de poser sur papier les choses que je "pense" savoir et qui m'ont permis d'expliquer durant ma piscine à mes pairs mon code !
 
 
 ### Complétion du C
