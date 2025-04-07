@@ -10,7 +10,7 @@ Je ne suis en aucun cas responsable si vous recevez un -42 ou si votre projet ne
 
 ✅ Quand j'en aurais le temps j'essaierai de fournir des explications détaillés sur le fonctionnemente et le raisonnement de mon code, pour que ceux qui cherchent un support pour apprendre pendant leur piscine, puissent trouver dans ce repo plus que juste des réponses à des exercices.
 
-💪 Codez par vous-même ! Essayez au maximum d'apprendre en cherchant d'abord les concept fondamentaux et faite un projet à votre sauce. C'est en forgeant qu'on devient forgeron, c'est en codant que vous deviendrez développeurs !
+💪 Codez par vous-même ! Essayez au maximum d'apprendre en cherchant d'abord les concept fondamentaux et faites un projet à votre sauce. C'est en forgeant qu'on devient forgeron, c'est en codant que vous deviendrez développeurs !
 
 Les sujets le répètent souvent et personnellement je m'y suis mis trop tard à mon goût mais utiliez la commande "man" ! Elle ne vous lâchera jamais parce que même en exam vous pouvez vous en servir (et ça c'est god tier vu qu'on a pas internet).
 
