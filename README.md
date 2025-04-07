@@ -63,3 +63,7 @@ Ces explications sont faites à partir de mes connaissances propres, ne les buve
 |   Exam01   | ✅ 40%  | ✅ 80%  |
 |   Exam02   | ✅ 40%  | ✅ 80%  |
 |   ExamFI   | ✅ 54%  | ✅ 66%  |
+
+### Et après ?
+Vous êtes reçu, vous appréciez ce repo et vous voulez voir la suite de l'aventure ?
+Vous pouvez faire un tour sur [42 Cursus](https://github.com/LeSpatiocorne/42_cursus).
