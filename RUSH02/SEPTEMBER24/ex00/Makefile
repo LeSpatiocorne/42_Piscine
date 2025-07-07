@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nidruon <nidruon@student.42.fr>            +#+  +:+       +#+         #
+#    By: nidruon <nidruon@student.42perpignan.fr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/21 10:06:39 by jotudela          #+#    #+#              #
-#    Updated: 2024/09/25 17:13:04 by nidruon          ###   ########.fr        #
+#    Updated: 2025/07/06 00:41:54 by nidruon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,6 @@ SRC_FILES	:= \
 		src/utils/ft_strlen.c \
 		src/utils/ft_str_numbers.c
 
-
 OBJ_FILES	:= $(SRC_FILES:.c=.o)
 
 ################################################################################
@@ -54,9 +53,11 @@ OBJ_FILES	:= $(SRC_FILES:.c=.o)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-all: $(OBJ_FILES)
+all: $(NAME)
 
-$(NAME): all
+$(NAME): $(OBJ_FILES)
+	$(CC) $(CFLAGS) $(OBJ_FILES) -o $(NAME)
+	@echo "$(GREEN)$(BOLD)$(NAME) successfully compiled!$(RESET)"
 
 clean:
 	rm -f $(OBJ_FILES)
